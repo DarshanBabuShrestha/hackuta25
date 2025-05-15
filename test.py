@@ -49,7 +49,6 @@ def get_speech_input():
             audio = recognizer.listen(source, timeout=15)
             text = recognizer.recognize_google(audio)
             print(f"🎙️ You said: {text}")
-            # ✅ Exit if "stop" is detected
             if "stop" in text:
                 print("Exiting GeminEye.")
                 engine.say("Thankyou for using GeminEye. Goodbye.")
